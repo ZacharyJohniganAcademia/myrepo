@@ -11,5 +11,13 @@ library(readr)
 # search()
 read_csv(file = "testdata.csv")
 
+# Modify column type in read_csv
+read_csv(
+  file = "testdata.csv",
+  col_types = cols(
+    id = col_integer(),
+    name = col_character(),
+    age = col_integer(),
+    food = col_character() ))
 
 ```
