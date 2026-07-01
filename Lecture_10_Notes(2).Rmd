@@ -9,15 +9,18 @@ getwd()
 library(readr)
 # To verify the readr library was loaded, run this code and look for "package:readr" in the console
 # search()
+
+# This is how you read what's on a .csv file.
 read_csv(file = "testdata.csv")
 
-# Modify column type in read_csv
+# Modify column type in read_csv. The cols() function allows you to change the column type (eg. <dbl>, <chr>, <int>, etc.).
 read_csv(
   file = "testdata.csv",
   col_types = cols(
     id = col_integer(),
     name = col_character(),
     age = col_integer(),
-    food = col_character() ))
+    food = col_character() )
+  )
 
 ```
